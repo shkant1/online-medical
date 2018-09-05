@@ -28,7 +28,6 @@
 <title>Online Medical - ${title}</title>
 <script>
 	window.menu = '${title}';
-
 	window.contextRoot = '${contextRoot}'
 </script>
 
@@ -38,6 +37,9 @@
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
+
+<!-- Bootstrap Readable Theme -->
+<link href="${css}/bootstrap-spacelab-theme.css" rel="stylesheet">
 
 </head>
 <body>
@@ -80,6 +82,7 @@
 		<!-- JavaScript -->
 		<script src="${js}/jquery-1.10.2.js"></script>
 		<script src="${js}/bootstrap.js"></script>
+		<script src="${js}/myapp.js"></script>
 		
 	</div>
 </body>
