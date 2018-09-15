@@ -1,24 +1,27 @@
 package net.sha.onlinemedical.handler;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.binding.message.MessageBuilder;
+import org.springframework.binding.message.MessageContext;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
+import net.sha.onlinemedical.model.RegisterModel;
 import net.sha.medicalbackend.dao.UserDAO;
 import net.sha.medicalbackend.dto.Address;
+import net.sha.medicalbackend.dto.Cart;
 import net.sha.medicalbackend.dto.User;
-import net.sha.onlinemedical.model.RegisterModel;
 
 @Component
 public class RegisterHandler {
 
 
-/* @Autowired
+ @Autowired
  private PasswordEncoder passwordEncoder;
-
+	
 	
  @Autowired
- private UserDAO userDAO;*/
+ private UserDAO userDAO;
  public RegisterModel init() { 
   return new RegisterModel();
  } 
@@ -29,7 +32,7 @@ public class RegisterHandler {
   registerModel.setBilling(billing);
  }
 
- /*public String validateUser(User user, MessageContext error) {
+ public String validateUser(User user, MessageContext error) {
   String transitionValue = "success";
    if(!user.getPassword().equals(user.getConfirmPassword())) {
     error.addMessage(new MessageBuilder().error().source(
@@ -66,4 +69,5 @@ public class RegisterHandler {
   userDAO.addAddress(billing);
   return transitionValue ;
  } 
-*/}
+ 
+}

@@ -35,7 +35,7 @@
 <link href="${css}/myapp.css" rel="stylesheet">
 
 <!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-spacelab-theme.css" rel="stylesheet">
+<link href="${css}/bootstrap-spacelab-theme.css" rel="stylesheet"> 
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,7 +54,7 @@
 	        <div class="container">
 	            <!-- Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">
-	                <a class="navbar-brand" href="${flowExecutionUrl}&_eventId=home"><span class="highlight">Meenakshi</span> <span class="highlightname">Medical Store</span></a>
+	                <a class="navbar-brand" href="${flowExecutionUrl}&_eventId=home"><span class="highlight">Meenakshi</span> <span>Medical Store</span></a>
 	            </div>
 			</div>
 		</nav>

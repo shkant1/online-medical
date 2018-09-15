@@ -9,33 +9,33 @@
      <var name="billing" class="net.sha.medicalbackend.dto.Address"/>
 	
 
-	<!--  <on-start>
+	 <on-start>
 		<evaluate expression="registerHandler.init()" result="flowScope.registerModel"/>
-	</on-start>  -->       
+	</on-start>        
                           
                           
      <!-- view the signup-personal page-->
 	<view-state id="personal" view="flows/register/signup-personal"  model="user">
 	<transition on="billing" to="billing" />
-	<!-- 	<on-exit>
+	 <on-exit>
 			<evaluate expression="registerHandler.addUser(flowScope.registerModel, user)" />			
-		</on-exit> -->
+		</on-exit>
 	</view-state>
 	
 	<!-- validate signup-personal page-->
-	<!-- <action-state id="validate">
+	<action-state id="validate">
 		<evaluate expression="registerHandler.validateUser(user,messageContext)" />
 		<transition on="success" to="billing"/>
 		<transition on="failure" to="personal"/>
-	</action-state> -->
+	</action-state> 
 	
 	<!-- view the signup-billing page-->
 	<view-state id="billing" view="flows/register/signup-billing" model="billing">		
 	 <transition on="confirm" to="confirm" />
 		<transition on="personal" to="personal" />	
-		<!-- <on-exit>
+		<on-exit>
 			<evaluate expression="registerHandler.addBilling(flowScope.registerModel, billing)" />
-		</on-exit> -->
+		</on-exit>
 	</view-state>
 	
                           
@@ -47,10 +47,10 @@
 	</view-state> 
 	
 	<!-- handle the submit action -->
-	<!--  <action-state id="submit">
+	 <action-state id="submit">
 		<evaluate expression="registerHandler.saveAll(flowScope.registerModel)" />
 		<transition on="success" to="success"/>
-	</action-state>  -->
+	</action-state>
 	<!-- end state -->
 	
 	<end-state id="home" view="externalRedirect:contextRelative:/" />

@@ -2,8 +2,8 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:wf="http://www.springframework.org/schema/webflow-config"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
     http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
@@ -13,29 +13,29 @@
     http://www.springframework.org/schema/webflow-config
     http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd        
     ">
-	<context:component-scan
-		base-package="net.sha.onlinemedical.controller" />
 
-
+	<context:component-scan base-package="net.sha.onlinemedical"/>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-
+		
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
-
+		
 	</bean>
+	
 	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
-
+		class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+	
+	
 	<!-- Loading static resources -->
 	<mvc:annotation-driven />
-
-	<mvc:resources location="/assets/"
-		mapping="/resources/**" />
-
-
-<!-- Webflow configuration -->
+	
+	<mvc:resources location="/assets/" mapping="/resources/**" />
+	
+	
+	
+	<!-- Webflow configuration -->
 	
 	<wf:flow-executor id="flowExecutor"  />
 	
@@ -54,13 +54,13 @@
 	
 	<bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
 		<property name="flowRegistry" ref="flowRegistry" />
-		 <property name="order" value="-1" />
+		<property name="order" value="-1" />
 	</bean>	
 	
    	<bean id="viewFactoryCreator" class="org.springframework.webflow.mvc.builder.MvcViewFactoryCreator">
          <property name="viewResolvers" ref="viewResolver" />
  	</bean>	
  	
-	 <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/> 	
- 
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/> 	
+
 </beans>

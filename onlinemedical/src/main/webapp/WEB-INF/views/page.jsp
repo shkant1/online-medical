@@ -37,9 +37,8 @@
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
-
-<!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-spacelab-theme.css" rel="stylesheet">
+ <!-- Bootstrap Readable Theme -->
+<link href="${css}/bootstrap-spacelab-theme.css" rel="stylesheet"> 
 
 </head>
 <body>
