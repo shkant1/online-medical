@@ -15,12 +15,12 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages={"net.kzn.shoppingbackend.dto"})
+@ComponentScan(basePackages={"net.sha.medicalbackend.dto"})
 @EnableTransactionManagement
 public class HibernateConfig {
 
 	// Change the below based on the DBMS you choose
-	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping";
+	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlinemedical";
 	private final static String DATABASE_DRIVER = "org.h2.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
 	private final static String DATABASE_USERNAME = "sa";
@@ -51,7 +51,7 @@ public class HibernateConfig {
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 		
 		builder.addProperties(getHibernateProperties());
-		builder.scanPackages("net.kzn.shoppingbackend.dto");
+		builder.scanPackages("net.sha.medicalbackend.dto");
 		
 		return builder.buildSessionFactory();
 		

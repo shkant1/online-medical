@@ -19,13 +19,13 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Online Shopping - ${title}</title>
+<title>Online Medical - ${title}</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+ <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 
 <!-- Custom CSS -->
@@ -92,13 +92,14 @@
        </div>
        
        <div class="panel-body">
-        <form action="${contextRoot}/login" method="POST" class="form-horizontal"
+        <form action="${contextRoot}/pqr" method="POST" class="form-horizontal"
          id="loginForm"
         >
          <div class="form-group">
           <label for="username" class="col-md-4 control-label">Email: </label>
           <div class="col-md-8">
            <input type="text" name="username" id="username" class="form-control"/>
+          				
           </div>
          </div>
          <div class="form-group">

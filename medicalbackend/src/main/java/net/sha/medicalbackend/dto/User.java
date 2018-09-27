@@ -16,7 +16,7 @@ import javax.persistence.Transient;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-@Table(name = "user_detail")
+@Table(name = "USER_DETAIL")
 public class User implements Serializable{
 
 	/**

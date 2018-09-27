@@ -16,7 +16,7 @@
                           
      <!-- view the signup-personal page-->
 	<view-state id="personal" view="flows/register/signup-personal"  model="user">
-	<transition on="billing" to="billing" />
+	<transition on="billing" to="validate" />
 	 <on-exit>
 			<evaluate expression="registerHandler.addUser(flowScope.registerModel, user)" />			
 		</on-exit>
@@ -41,7 +41,7 @@
                           
   <!-- view the signup-confirm page -->	
 	<view-state id="confirm" view="flows/register/signup-confirm" model="flowScope.registerModel">		
-		<transition on="success" to="success" />
+		<transition on="submit" to="submit" />
 		<transition on="billing" to="billing" />
 		<transition on="personal" to="personal" /> 
 	</view-state> 

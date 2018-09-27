@@ -12,7 +12,7 @@ import net.sha.medicalbackend.dto.Address;
 import net.sha.medicalbackend.dto.User;
 
 
-@Repository("userDAO")
+@Repository("UserDAO")
 @Transactional
 public class UserDAOImpl implements UserDAO {
 

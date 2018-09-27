@@ -20,10 +20,12 @@
 <head>
 
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Online Medical store">
+<meta name="author" content="Shashi kant">
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 
 <title>Online Medical - ${title}</title>
 <script>
@@ -38,7 +40,7 @@
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
  <!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-spacelab-theme.css" rel="stylesheet"> 
+ <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet"> 
 
 </head>
 <body>
